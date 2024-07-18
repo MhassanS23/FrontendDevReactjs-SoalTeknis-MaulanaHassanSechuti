@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+import Homepages from "./pages/Homepages.js";
+
+import { store } from "./app/store.js";
+import { Provider } from "react-redux";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Homepages />} />
+          </Routes>
+        </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

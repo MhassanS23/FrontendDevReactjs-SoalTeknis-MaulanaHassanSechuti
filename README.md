@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+React Version : "react": "^18.3.1",
+Node js Version : v18.17.1,
+Free API Restaurant: https://restaurant-api.dicoding.dev,
+Untuk fitur filter restaurant open or not tidak ada karena API tidak menyediakan atribut tersebut
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

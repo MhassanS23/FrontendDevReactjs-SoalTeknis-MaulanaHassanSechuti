@@ -33,7 +33,7 @@ function Homepages() {
   useEffect(()=>{
     dispatch(fetchRestaurants());
     dispatch(searchRestaurants(category));
-  },[category]);
+  },[category, dispatch]);
 
   return (
     <>

@@ -39,7 +39,7 @@ export default function FilterCard({ rating, handleChange, reset, category, hand
           <option value="Sunda">Sunda</option>
         </select>
       </div>
-      <button onClick={reset} className="w-[15%] py-[0.5rem] text-sm text-gray-300 border border-gray-300 hover:bg-blue-1 hover:text-white">CLEAR ALL</button>
+      <button onClick={reset} className="w-[15%] py-[0.5rem] text-sm text-blue-1 border border-blue-1 hover:bg-blue-1 hover:text-white">CLEAR ALL</button>
     </div>
   );
 }

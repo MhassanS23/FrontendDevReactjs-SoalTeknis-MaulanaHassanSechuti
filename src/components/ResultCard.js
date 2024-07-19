@@ -1,23 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 
-// import tryImage from "../assets/poster_404.png";
 import { IoIosStar, IoIosStarHalf, IoIosStarOutline } from "react-icons/io";
 import { FaCircle } from "react-icons/fa";
 import Title from "./Title";
-
-// REDUX
-// import { useDispatch, useSelector } from "react-redux";
-// import { detailRestaurants } from "../features/restaurant/restaurantSlice";
+import Modal from "./Modal";
 
 const img_url = process.env.REACT_APP_BASE_IMGURL;
 
 export default function ResultCard({data}) {
-//   const detailResto = useSelector(state => state.resto.detail);
-//   const dispatch = useDispatch();
+    // STATE
+    let [isOpen, setIsOpen] = useState(false);
 
-//   useEffect(()=>{
-//     dispatch(detailRestaurants(data.id));
-//   },[data.id]);
+    // FUNCTION
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    function openModal() {
+        setIsOpen(true);
+    }
 
 const displayStar = (rating) => {
     const stars = [];
@@ -61,11 +62,12 @@ const displayStar = (rating) => {
       </div>
 
       <button
-        type={"submit"}
+        onClick={openModal}
         className="rounded-sm bg-blue-1 text-sm text-white px-4 py-2 hover:bg-blue-4"
       >
         LEARN MORE
       </button>
+      {isOpen && <Modal isOpen={isOpen} closeModal={closeModal} id={data.id}/>}
     </div>
   );
 }

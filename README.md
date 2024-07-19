@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Link Deploy Netlify: https://frontenddevreactjs-maulanahassansechu.netlify.app/\
+Link Deploy Netlify: https://frontenddevreactjs-maulanahassansechu.netlify.app/ \
 React Version : "react": "^18.3.1",\
 Node js Version : v18.17.1,\
 Free API Restaurant: https://restaurant-api.dicoding.dev,\
